@@ -1,0 +1,61 @@
+{
+  "name": "HideAlt",
+
+  "version": "0.1",
+
+  "manifest_version": 2,
+
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "webNavigation"
+  ],
+
+  "background": {
+    "scripts": ["js/update.js"]
+  },
+
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "js": ["js/hide-alt.js"],
+      "matches": [ "*://*.twitter.com/*" ]
+    },
+
+    {
+      "run_at": "document_start",
+      "css": ["css/desktop.css"],
+      "matches": [
+        "*://www.twitter.com/*",
+        "*://twitter.com/*"
+      ]
+    },
+
+    {
+      "run_at": "document_start",
+      "css": ["css/mobile.css"],
+      "matches": [
+        "*://mobile.twitter.com/*",
+        "*://m.twitter.com/*"
+      ]
+    }
+  ],
+
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+
+  "icons": {
+    "16": "img/icon16.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+
+  "browser_action": {
+    "default_popup": "options.html",
+    "default_title": "HideAlt",
+    "default_icon": "img/icon128.png"
+  }
+}

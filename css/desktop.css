@@ -1,0 +1,4 @@
+.AdaptiveMedia-photoContainer img:not(.hide-alt-seen) {
+  visibility: hidden;
+}
+

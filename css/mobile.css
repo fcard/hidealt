@@ -1,0 +1,4 @@
+div:not([class]):not([id]) div[style*=background-image][style*=media]:not(.hide-alt-seen) {
+  visibility: hidden;
+}
+

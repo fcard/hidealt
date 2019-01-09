@@ -1,0 +1,66 @@
+body {
+  padding: 10px;
+  min-width: 200px;
+  max-width: 300px;
+}
+
+#word-input-box {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  display: block;
+}
+
+#word-input {
+  float: left;
+  width: calc(100% - 38px);
+  margin-right: 4px;
+}
+
+#word-input-button {
+  margin: 0;
+  padding: 0;
+  padding-right: 4px;
+  padding-left: 4px;
+  max-width: 30px;
+  float: right;
+  background-color: transparent;
+  color: darkblue;
+}
+
+#words {
+  list-style-type: none;
+  margin: 0;
+  margin-left: -4px;
+  margin-right: 4px;
+  width: 100%;
+  white-space: normal;
+  padding: 0;
+}
+
+.word-item {
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 3px;
+  padding: 3px;
+  margin: 4px;
+  display: block;
+  white-space: normal;
+  min-height: 18px;
+  width: 100%;
+}
+
+.word-item span {
+  margin-right: 4px;
+  display: inline-block;
+  overflow: auto;
+}
+
+.word-item button {
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  margin: 0;
+  max-height: 18px;
+  float: right;
+  color: red;
+}
